@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
@@ -18,20 +18,20 @@
     <header class="page-header">
       <div class="container page-header-blocks">
         <div class="block-navigation">
-          <nav>
-            <ul class="site-nav">
+          <nav class="site-nav">
+            <ul class="site-nav-list">
               <li class="site-nav-item"><a href="./index.html" class="site-nav-link">О нас</a></li>
-              <li class="site-nav-item"><a href="" class="site-nav-link"></a>Услуги и цены</li>
-              <li class="site-nav-item"><a href="" class="site-nav-link"></a>Мастера</li>
-              <li class="site-nav-item"><a href="" class="site-nav-link"></a>Контакты</li>
+              <li class="site-nav-item"><a href="" class="site-nav-link">Услуги и цены</a></li>
+              <li class="site-nav-item"><a href="" class="site-nav-link">Мастера</a></li>
+              <li class="site-nav-item"><a href="" class="site-nav-link">Контакты</a></li>
             </ul>
           </nav>
-          <ul class="header-contacts">
+          <ul class="header-contacts-list">
             <li class="header-contacts-item">
-              <a href="tel:+380441111111" class="header-contacts-link"></a>+38 044 111 11 11
+              <a href="tel:+380441111111" class="header-contacts-link">+38 044 111 11 11</a>
             </li>
             <li class="header-contacts-item">
-              <a href="" class="header-contacts-link"></a>онлайн-запись
+              <a href="" class="header-contacts-link header-contacts-btn">онлайн-запись</a>
             </li>
           </ul>
         </div>
@@ -60,10 +60,15 @@
       </section>
 
       <!-- О нас -->
-      <section class="section">
+      <section>
         <div class="container about-us">
-          <img src="./images/about_us_1.jpg" alt="Мастер бреет шею" />
-          <img src="./images/about_us_2.jpg" alt="Мастер стрижет затылок" />
+          <img src="./images/about_us_1.jpg" alt="Мастер бреет шею" width="270" height="445" />
+          <img
+            src="./images/about_us_2.jpg"
+            alt="Мастер стрижет затылок"
+            width="270"
+            height="445"
+          />
           <p class="subtitle">О НАС</p>
           <h2 class="section-title">Лучший Барбершоп твоего города</h2>
           <p class="about-us-paragraph">
@@ -80,7 +85,7 @@
       </section>
 
       <!-- Прайс -->
-      <section class="section">
+      <section class="price">
         <div class="container">
           <p class="subtitle secondary-subtitle">Проведи время в компании лучших мастеров</p>
           <h2 class="section-title price-title">Услуги и цены</h2>
@@ -116,8 +121,8 @@
         </div>
       </section>
 
-      <!-- Почему мы -->
-      <section class="section">
+      <!-- Преимущества -->
+      <section>
         <div class="container features">
           <ul class="features-list">
             <li class="features-list-item">
@@ -147,14 +152,20 @@
       </section>
 
       <!-- Наши мастера -->
-      <section class="section">
+      <section>
         <div class="container barbers">
           <p class="subtitle">для настоящих ценителей атмосферы</p>
           <h2 class="section-title">Наши мастера</h2>
           <ul class="barbers-list">
             <li class="barbers-list-item">
-              <img src="./images/master1.jpg" alt="Мастер первый" class="barbers-list-img" />
-              <h3 class="barbers-list-title" lang="en">John Smith</h3>
+              <img
+                src="./images/master1.jpg"
+                alt="Мастер первый"
+                width="370"
+                height="346"
+                class="barbers-list-img"
+              />
+              <h3 class="barbers-list-name" lang="en">John Smith</h3>
               <p class="barbers-list-text" lang="en">Extreme Barber</p>
               <ul class="social-network-list">
                 <li class="social-network-item"><a href="" class="social-network-link"></a></li>
@@ -164,8 +175,14 @@
               </ul>
             </li>
             <li class="barbers-list-item">
-              <img src="./images/master2.jpg" alt="Мастер второй" class="barbers-list-img" />
-              <h3 class="barbers-list-title" lang="en">Michele Doe</h3>
+              <img
+                src="./images/master2.jpg"
+                alt="Мастер второй"
+                width="370"
+                height="346"
+                class="barbers-list-img"
+              />
+              <h3 class="barbers-list-name" lang="en">Michele Doe</h3>
               <p class="barbers-list-text" lang="en">Extreme Barber</p>
               <ul class="social-network-list">
                 <li class="social-network-item"><a href="" class="social-network-link"></a></li>
@@ -175,8 +192,14 @@
               </ul>
             </li>
             <li class="barbers-list-item">
-              <img src="./images/master3.jpg" alt="Мастер третий" class="barbers-list-img" />
-              <h3 class="barbers-list-title" lang="en">Alan Black</h3>
+              <img
+                src="./images/master3.jpg"
+                alt="Мастер третий"
+                width="370"
+                height="346"
+                class="barbers-list-img"
+              />
+              <h3 class="barbers-list-name" lang="en">Alan Black</h3>
               <p class="barbers-list-text" lang="en">Extreme Barber</p>
               <ul class="social-network-list">
                 <li class="social-network-item"><a href="" class="social-network-link"></a></li>
@@ -190,7 +213,7 @@
       </section>
 
       <!-- Галерея -->
-      <section class="section">
+      <section>
         <div class="container">
           <p class="subtitle">На латинском языке “барба” означает “борода”</p>
           <!-- Скрытый заголовок -->
@@ -200,6 +223,8 @@
               <img
                 src="./images/GalleryFoto1.jpg"
                 alt="Барбер делает стрижку"
+                width="270"
+                height="360"
                 class="gallery-foto-img"
               />
             </li>
@@ -207,6 +232,8 @@
               <img
                 src="./images/GalleryFoto2.jpg"
                 alt="Барбер бреет лицо"
+                width="270"
+                height="360"
                 class="gallery-foto-img"
               />
             </li>
@@ -214,6 +241,8 @@
               <img
                 src="./images/GalleryFoto3.jpg"
                 alt="Барбер разогревает лицо"
+                width="270"
+                height="360"
                 class="gallery-foto-img"
               />
             </li>
@@ -221,6 +250,8 @@
               <img
                 src="./images/GalleryFoto4.jpg"
                 alt="Барбер бреет шею"
+                width="270"
+                height="360"
                 class="gallery-foto-img"
               />
             </li>
@@ -229,18 +260,18 @@
       </section>
 
       <!-- Секция контактов и он-лайн записи -->
-      <section class="section">
+      <section>
         <div class="container contacts-blocks">
           <div class="appointment-block">
-            <p>Онлайн-запись</p>
-            <button type="button">отправить</button>
+            <p class="section-title contacts-title">Онлайн-запись</p>
+            <button type="button" class="appointment-btn">отправить</button>
           </div>
           <div class="container contacts-block">
-            <p>Контакты</p>
+            <p class="section-title contacts-title">Контакты</p>
             <address class="contacts">
               <ul class="contacts-list">
                 <li class="contacts-item">
-                  <a href="" target="_blank" class="contacts-location">
+                  <a href="" target="_blank" class="contacts-link">
                     ул. Васильковая, 7А Киев, 08132
                   </a>
                 </li>
@@ -262,7 +293,7 @@
     </main>
 
     <footer>
-      <p class="footer-text">Copyright 2020</p>
+      <p class="footer-text">&copy; Copyright 2020</p>
       <ul class="networks-list">
         <li class="networks-item"><a href="" class="networks-link">Instagram</a></li>
         <li class="networks-item"><a href="" class="networks-link">Youtube</a></li>

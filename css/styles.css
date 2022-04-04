@@ -2,28 +2,31 @@
 /* вторичный цвет текста #303030 */
 /* белый #FFFFFF */
 /* серый для сабтайтла героя rgba(157, 164, 189, 0.6)*/
-/* белый с прозрачностю для героя #9DA4BD */
+/* серый текст для героя #9DA4BD */
 /* акцент #FF6C00 */
 /* цвет фона героя rgba(25, 28, 38, 0.2) */
 /* цвет фона доп. секций #F7F7F7 */
+/* цвет фона доп. секций #191C26 */
 
 :root {
     --primary-text-color: #555555;
     --secondary-text-color: #303030;
     --primary-white-color: #FFFFFF;
-    --primary-grey-text: #9DA4BD;
     --secondary-grey: rgba(157, 164, 189, 0.6);
+    --primary-grey: #9DA4BD;
     --accent-color: #FF6C00;
     --background-hero-color: rgba(25, 28, 38, 0.2);
     --background-secondary-color: #F7F7F7;
+    --background-contacts-color: #191C26;
 }
 
 body {
     background-color: var(--primary-white-color);
     color: var(--primary-text-color);
-    font-family: OpenSans, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 18px;
     line-height: 1.67;
+    letter-spacing: 0.02em;
 }
 
 ul {
@@ -59,6 +62,8 @@ img {
     overflow: hidden;
 }
 
+/* Общие стили секций */
+
 .container {
     /* margin-left: auto;
     margin-right: auto;
@@ -67,3 +72,202 @@ img {
     padding-right: 15px; */
 }
 
+.subtitle {
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.section-title {
+    color: var(--secondary-text-color);
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+}
+
+/* Стили хедера */
+.page-header {
+    background-color: var(--background-contacts-color);
+    font-weight: 600;
+}
+
+.site-nav-link {
+    color: var(--primary-white-color);
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+}
+
+.header-contacts-link {
+    color: var(--primary-white-color);
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.header-contacts-btn {
+    letter-spacing: 0.09em;
+}
+
+.networks-link {
+    color: var(--secondary-text-color);
+    font-size: 11px;
+    line-height: 1.36;
+}
+
+.site-nav-link:hover,
+.site-nav-link:focus,
+/* .header-contacts-link:hover,
+.header-contacts-link:focus, */
+.networks-link:hover,
+.networks-link:focus {
+    color: var(--accent-color);
+}
+
+/* Стили героя */
+.hero {
+    background-color: var(--background-contacts-color);
+}
+
+.secondary-subtitle {
+    color: var(--secondary-grey);
+}
+
+.hero-title {
+    color: var(--primary-white-color);
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.18;
+    letter-spacing: 0.05em;
+}
+
+.hero-text {
+    color: var(--primary-grey);
+}
+
+/* Стили секции "О нас" */
+.about-us-text {
+    font-size: 14px;
+    line-height: 1.86;
+}
+
+.about-us-link {
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+/* Стили прайса */
+.price {
+    background-color: var(--background-contacts-color);
+}
+
+.price-title {
+    color: var(--primary-white-color);
+}
+
+.price-list-text {
+    color: var(--primary-grey);
+}
+
+.price-link {
+    color: var(--primary-white-color);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+/* Стили преимуществ */
+.features-list-number {
+    color: var(--secondary-text-color);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1,36;
+    letter-spacing: 0.05em;
+}
+
+.features-list-text {
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+}
+
+/* Стили мастеров */
+.barbers {
+    background-color: var(--background-secondary-color);
+}
+.barbers-list-name {
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+}
+
+.barbers-list-text {
+    color: var(--accent-color);
+    font-size: 14px;
+    line-height: 1.36;
+}
+
+/* Стили галереи */
+
+/* Стили контактов */
+.contacts-blocks {
+    background-color: var(--background-contacts-color);
+}
+
+.contacts-title {
+    color: var(--primary-white-color);
+}
+
+.appointment-btn {
+    color: var(--primary-white-color);
+    background-color: var(--background-contacts-color);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    border: 1px solid var(--accent-color);
+}
+
+.contacts-link {
+    color: var(--primary-grey);
+    font-style: normal;
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+    color: var(--accent-color);
+}
+
+.timetable {
+    color: var(--primary-white-color);
+}
+
+.timetable-text {
+    color: var(--primary-grey);
+}
+
+/* Стили подвала */
+
+.footer-text {
+    color: var(--primary-grey);
+    background-color: var(--background-secondary-color);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+}
