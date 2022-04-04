@@ -1,8 +1,69 @@
-/* цвет основного текста hsba(0, 0%, 33%, 1) */
-/* вторичный цвет текста hsba(0, 0%, 19%, 1) */
-/* белый hsba(0, 0%, 100%, 1) */
-/* белый с прозрачностю для героя hsba(227, 17%, 74%, 0.6)*/
-/* белый с прозрачностю для героя hsba(227, 17%, 74%, 1)*/
-/* акцент hsba(25, 100%, 100%, 1) */
-/* цвет фона героя #191C26 */
-/* цвет фона некоторыъ секций #9DA4BD */
+/* цвет основного текста #555555 */
+/* вторичный цвет текста #303030 */
+/* белый #FFFFFF */
+/* серый для сабтайтла героя rgba(157, 164, 189, 0.6)*/
+/* белый с прозрачностю для героя #9DA4BD */
+/* акцент #FF6C00 */
+/* цвет фона героя rgba(25, 28, 38, 0.2) */
+/* цвет фона доп. секций #F7F7F7 */
+
+:root {
+    --primary-text-color: #555555;
+    --secondary-text-color: #303030;
+    --primary-white-color: #FFFFFF;
+    --primary-grey-text: #9DA4BD;
+    --secondary-grey: rgba(157, 164, 189, 0.6);
+    --accent-color: #FF6C00;
+    --background-hero-color: rgba(25, 28, 38, 0.2);
+    --background-secondary-color: #F7F7F7;
+}
+
+body {
+    background-color: var(--primary-white-color);
+    color: var(--primary-text-color);
+    font-family: OpenSans, sans-serif;
+    font-size: 18px;
+    line-height: 1.67;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    /* margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px; */
+}
+
