@@ -20,6 +20,10 @@
     --background-contacts-color: #191C26;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--primary-white-color);
     color: var(--primary-text-color);
@@ -29,13 +33,13 @@ body {
     letter-spacing: 0.02em;
 }
 
-ul {
+ul, ol {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-p {
+p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
@@ -47,6 +51,10 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+button {
+    cursor: pointer;
 }
 
 .visually-hidden {
@@ -63,16 +71,22 @@ img {
 }
 
 /* Общие стили секций */
+.section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
 
-.container {
-    /* margin-left: auto;
-    margin-right: auto;
+.container { 
     width: 1200px;
     padding-left: 15px;
-    padding-right: 15px; */
+    padding-right: 15px;
+    margin: 0 auto;
+    outline: 1px solid tomato;
 }
 
 .subtitle {
+    margin-bottom: 20px;
+    
     color: var(--secondary-text-color);
     font-weight: 600;
     font-size: 11px;
@@ -91,9 +105,26 @@ img {
 }
 
 /* Стили хедера */
-.page-header {
-    background-color: var(--background-contacts-color);
+.page-header-blocks {
+    display: flex;
+
+    background-color: var(--secondary-grey);
     font-weight: 600;
+}
+
+.logo {
+    margin-right: 69px;
+}
+
+.site-nav-list {
+    display: flex;
+    align-items: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.site-nav-item + .site-nav-item {
+    margin-left: 40px;
 }
 
 .site-nav-link {
@@ -103,7 +134,15 @@ img {
     letter-spacing: 0.1em;
 }
 
+.header-contacts {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
 .header-contacts-link {
+    margin-right: 60px;
+
     color: var(--primary-white-color);
     font-size: 12px;
     line-height: 1.33;
@@ -111,28 +150,53 @@ img {
     text-transform: uppercase;
 }
 
-.header-contacts-btn {
+.primery-btn {
+    min-width: 160px;
+    padding: 12px 20px;
+
+    color: var(--primary-white-color);
+    background-color: transparent;
+    font-family: Open Sans, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
     letter-spacing: 0.09em;
+    text-transform: uppercase;
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
 }
 
-.networks-link {
-    color: var(--secondary-text-color);
-    font-size: 11px;
-    line-height: 1.36;
+.primery-btn:hover,
+.primery-btn:focus {
+    background-color: var(--accent-color);
 }
 
 .site-nav-link:hover,
-.site-nav-link:focus,
-/* .header-contacts-link:hover,
-.header-contacts-link:focus, */
+.site-nav-link:focus {
+    color: var(--accent-color);
+}
+
+/* Стили героя */
+.networks-link {
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+}
+
+.networks-item + .networks-item {
+    margin-left: 40px;
+}
+
 .networks-link:hover,
 .networks-link:focus {
     color: var(--accent-color);
 }
 
-/* Стили героя */
-.hero {
+.hero-content {
     background-color: var(--background-contacts-color);
+    padding: 232px 0 206px 96px;
 }
 
 .secondary-subtitle {
@@ -149,22 +213,57 @@ img {
 }
 
 .hero-text {
+    margin-top: 20px;
+    max-width: 400px;
+
     color: var(--primary-grey);
 }
 
 /* Стили секции "О нас" */
-.about-us-text {
+.about {
+    display: flex;
+}
+
+.about-list {
+    display: flex;
+    padding-top: 139px;
+    padding-bottom: 121px;
+}
+
+.about-list-item {
+    width: 270px;
+}
+
+.about-list-item + .about-list-item {
+    margin-left: 30px;
+}
+
+.about-content {
+    display: block;
+    margin-left: 64px;
+    padding-top: 139px;
+}
+
+.about-undertitle {
+    margin-top: 20px;
+}
+
+.about-text {
+    margin-top: 20px;
+
     font-size: 14px;
     line-height: 1.86;
 }
 
-.about-us-link {
+.about-btn {
+    margin-top: 40px;
+
     color: var(--secondary-text-color);
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
+}
+
+.about-btn:hover,
+.about-btn:focus {
+    color: var(--primary-white-color);
 }
 
 /* Стили прайса */
@@ -176,25 +275,68 @@ img {
     color: var(--primary-white-color);
 }
 
-.price-list-text {
+.price-lists {
+    display: flex;
+    margin-top: 44px;
+
     color: var(--primary-grey);
 }
 
-.price-link {
-    color: var(--primary-white-color);
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
+.price-list {
+    display: block;
+    padding: 30px 40px;
+}
+
+.price-list-item + .price-list-item {
+    margin-top: 20px;
+}
+
+.price-btn {
+    margin-top: 50px;
+    margin-left: 506px;
 }
 
 /* Стили преимуществ */
+.features {
+    display: flex;
+    align-items: baseline;
+    padding-top: 114px;
+    padding-bottom: 137px;
+}
+
+.features-blocks {
+    margin-left: 105px;
+}
+
+/* .features-list {
+    display: flex;
+} */
+
+.features-list-item {
+   display: block;
+
+   width: 170px;
+   height: 133px;
+
+   background-color: var(--background-secondary-color);
+   border: 1px solid black;
+}
+
+.features-content {
+    padding: 20px 24px;
+    text-align: center;
+}
+
+.features-content-last {
+    padding: 20px;
+    text-align: center;
+}
+
 .features-list-number {
     color: var(--secondary-text-color);
     font-weight: 700;
     font-size: 42px;
-    line-height: 1,36;
+    line-height: 1.36;
     letter-spacing: 0.05em;
 }
 
@@ -205,11 +347,33 @@ img {
     line-height: 1.36;
 }
 
+.features-block {
+    margin-left: 130px;
+}
+
+.features-text {
+    margin-top: 20px;
+}
+
 /* Стили мастеров */
 .barbers {
     background-color: var(--background-secondary-color);
 }
+
+.barbers-list {
+    display: flex;
+    text-align: center;
+
+    margin-top: 44px;
+}
+
+.barbers-list-item + .barbers-list-item {
+    margin-left: 30px;
+}
+
 .barbers-list-name {
+    margin-top: 30px;
+
     color: var(--secondary-text-color);
     font-weight: 400;
     font-size: 18px;
@@ -217,40 +381,64 @@ img {
 }
 
 .barbers-list-text {
+    margin-top: 8px;
+
     color: var(--accent-color);
     font-size: 14px;
     line-height: 1.36;
 }
 
+.social-network-list {
+    margin-top: 30px;
+    height: 44px;
+
+    border: 1px solid black;
+}
+
 /* Стили галереи */
 
+.gallery-list {
+    display: flex;
+    margin-top: 44px;
+}
+
+.gallery-list-item + .gallery-list-item {
+    margin-left: 30px;
+}
+
 /* Стили контактов */
-.contacts-blocks {
+.contacts {
     background-color: var(--background-contacts-color);
+}
+
+.contacts-blocks {
+    display: flex;
+}
+
+.appointment-block, .contacts-block {
+    width: 50%;
 }
 
 .contacts-title {
     color: var(--primary-white-color);
 }
 
-.appointment-btn {
-    color: var(--primary-white-color);
-    background-color: var(--background-contacts-color);
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    border: 1px solid var(--accent-color);
+.contacts-list {
+    margin-top: 40px;
+    margin-bottom: 70px;
 }
 
-.contacts-link {
+.contacts-list-item + .contacts-list-item {
+    margin-top: 20px;
+}
+
+.contacts-list-link {
     color: var(--primary-grey);
     font-style: normal;
 }
 
-.contacts-link:hover,
-.contacts-link:focus {
+.contacts-list-link:hover,
+.contacts-list-link:focus {
     color: var(--accent-color);
 }
 
@@ -263,11 +451,25 @@ img {
 }
 
 /* Стили подвала */
+.page-footer {
+    background-color: var(--background-secondary-color);
+    padding-top: 57px;
+    padding-bottom: 55px;
+}
+
+.footer-blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .footer-text {
     color: var(--primary-grey);
-    background-color: var(--background-secondary-color);
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
+}
+
+.footer-list {
+    display: flex;
 }
