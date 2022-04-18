@@ -6,7 +6,8 @@
 /* акцент #FF6C00 */
 /* цвет фона героя rgba(25, 28, 38, 0.2) */
 /* цвет фона доп. секций #F7F7F7 */
-/* цвет фона доп. секций #191C26 */
+/* цвет фона героя и контактов #191C26 */
+/* цвет фона прайса #111319 */
 
 :root {
     --primary-text-color: #555555;
@@ -18,6 +19,9 @@
     --background-hero-color: rgba(25, 28, 38, 0.2);
     --background-secondary-color: #F7F7F7;
     --background-contacts-color: #191C26;
+    --background-price-color: #111319;
+    --typical-text-margin: 20px;
+    --typical-card-margin: 30px;
 }
 
 * {
@@ -33,7 +37,7 @@ body {
     letter-spacing: 0.02em;
 }
 
-ul, ol {
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -76,7 +80,8 @@ button {
     padding-bottom: 130px;
 }
 
-.container { 
+.container {
+
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
@@ -85,7 +90,9 @@ button {
 }
 
 .subtitle {
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--typical-text-margin);
     
     color: var(--secondary-text-color);
     font-weight: 600;
@@ -93,6 +100,16 @@ button {
     line-height: 1.36;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+}
+
+.subtitle::before {
+    content: "";
+
+    width: 60px;
+    height: 1px;
+    margin-right: var(--typical-text-margin);
+
+    background-color: currentColor;
 }
 
 .section-title {
@@ -105,15 +122,25 @@ button {
 }
 
 /* Стили хедера */
-.page-header-blocks {
-    display: flex;
+.page-header {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
 
-    background-color: var(--secondary-grey);
+.page-header .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+
     font-weight: 600;
 }
 
 .logo {
-    margin-right: 69px;
+    margin-right: 70px;
 }
 
 .site-nav-list {
@@ -135,13 +162,11 @@ button {
 }
 
 .header-contacts {
-    display: flex;
     margin-left: auto;
-    align-items: center;
 }
 
 .header-contacts-link {
-    margin-right: 60px;
+    margin-right: 40px;
 
     color: var(--primary-white-color);
     font-size: 12px;
@@ -152,7 +177,8 @@ button {
 
 .primery-btn {
     min-width: 160px;
-    padding: 12px 20px;
+    height: 40px;
+    margin-right: 7px;
 
     color: var(--primary-white-color);
     background-color: transparent;
@@ -172,12 +198,50 @@ button {
 }
 
 .site-nav-link:hover,
-.site-nav-link:focus {
+.site-nav-link:focus,
+.header-contacts-link:hover,
+.header-contacts-link:focus {
     color: var(--accent-color);
 }
 
 /* Стили героя */
-.networks-link {
+.hero {
+
+}
+.hero .container {
+    display: flex;
+}
+.hero-networks-thumb {
+    position: relative;
+    width: 93px;
+}
+
+.hero-networks {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.networks-list-item {
+    display: flex;
+    align-items: center;
+}
+
+.networks-list-item:first-child::before {
+    content: "";
+
+    width: 60px;
+    height: 1px;
+    margin-right: 40px;
+
+    background-color: var(--secondary-text-color);
+}
+
+.networks-list-item + .networks-list-item {
+    margin-left: 40px;
+}
+
+.networks-list-link {
     color: var(--secondary-text-color);
     font-weight: 600;
     font-size: 11px;
@@ -185,18 +249,23 @@ button {
     letter-spacing: 0.2em;
 }
 
-.networks-item + .networks-item {
-    margin-left: 40px;
-}
-
-.networks-link:hover,
-.networks-link:focus {
+.networks-list-link:hover,
+.networks-list-link:focus {
     color: var(--accent-color);
 }
 
 .hero-content {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 272px 0 206px 96px;
+        
     background-color: var(--background-contacts-color);
-    padding: 232px 0 206px 96px;
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), 
+    url(../images/hero_img1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .secondary-subtitle {
@@ -213,43 +282,33 @@ button {
 }
 
 .hero-text {
-    margin-top: 20px;
+    margin-top: var(--typical-text-margin);
     max-width: 400px;
 
     color: var(--primary-grey);
 }
 
 /* Стили секции "О нас" */
-.about {
+.about .container {
     display: flex;
 }
 
 .about-list {
     display: flex;
-    padding-top: 139px;
-    padding-bottom: 121px;
-}
-
-.about-list-item {
-    width: 270px;
+    flex-shrink: 0;
+    margin-right: 64px;
 }
 
 .about-list-item + .about-list-item {
-    margin-left: 30px;
-}
-
-.about-content {
-    display: block;
-    margin-left: 64px;
-    padding-top: 139px;
+    margin-left: var(--typical-card-margin);
 }
 
 .about-undertitle {
-    margin-top: 20px;
+    margin-top: var(--typical-text-margin);
 }
 
 .about-text {
-    margin-top: 20px;
+    margin-top: var(--typical-text-margin);
 
     font-size: 14px;
     line-height: 1.86;
@@ -268,71 +327,111 @@ button {
 
 /* Стили прайса */
 .price {
-    background-color: var(--background-contacts-color);
+
+    max-width: 1280px;
+    margin: 0 auto;
+
+    background-color: var(--background-price-color);
+    background-image: url(../images/price_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.price-title {
+.secondary-title {
     color: var(--primary-white-color);
 }
 
 .price-lists {
     display: flex;
     margin-top: 44px;
-
-    color: var(--primary-grey);
+    margin-bottom: 50px;
 }
 
 .price-list {
     display: block;
+    width: 50%;
     padding: 30px 40px;
+
+    color: var(--primary-grey);
+}
+
+.price-list:first-child {
+    background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-list:last-child {
+    background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.price-list-item {
+    display: flex;
+    align-items: baseline;
 }
 
 .price-list-item + .price-list-item {
-    margin-top: 20px;
+    margin-top: var(--typical-text-margin);
+}
+
+.price-list-item::before {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    margin: 0 6px;
+    
+    background-color: rgba(157, 164, 189, 0.12);
+}
+
+.price-list-text:first-child {
+    order: -1;
 }
 
 .price-btn {
-    margin-top: 50px;
-    margin-left: 506px;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Стили преимуществ */
 .features {
     display: flex;
-    align-items: baseline;
-    padding-top: 114px;
-    padding-bottom: 137px;
+    justify-content: space-between;
+    padding-top: 121px;
+    padding-bottom: 130px;
 }
 
 .features-blocks {
-    margin-left: 105px;
+    display: flex;
+    justify-content: center;
+    width: calc(50% - 15px);
 }
 
-/* .features-list {
+.features-list {
     display: flex;
-} */
+    flex-wrap: wrap;
+    width: 370px;
+}
 
 .features-list-item {
-   display: block;
-
    width: 170px;
    height: 133px;
+   padding: 20px 24px;
 
    background-color: var(--background-secondary-color);
-   border: 1px solid black;
 }
 
-.features-content {
-    padding: 20px 24px;
-    text-align: center;
+.features-list-item:nth-child(odd) {
+    margin-right: var(--typical-card-margin);
 }
 
-.features-content-last {
-    padding: 20px;
-    text-align: center;
+.features-list-item:nth-child(even) {
+    margin-top: var(--typical-card-margin);
 }
 
 .features-list-number {
+    position: relative;
+    display: block;
+    text-align: center;
+
     color: var(--secondary-text-color);
     font-weight: 700;
     font-size: 42px;
@@ -340,19 +439,34 @@ button {
     letter-spacing: 0.05em;
 }
 
+.features-list-number::after {
+    content: "+";
+    position: absolute;
+    top: 5px;
+    margin-left: 3px;
+
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.38;
+}
+
 .features-list-text {
+    text-align: center;
+
     color: var(--secondary-text-color);
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
 }
 
-.features-block {
-    margin-left: 130px;
+.features-content {
+    width: calc(50% - 15px);
+    padding-top: 9px;
 }
 
 .features-text {
-    margin-top: 20px;
+    margin-top: var(--typical-text-margin);
 }
 
 /* Стили мастеров */
@@ -365,10 +479,12 @@ button {
     text-align: center;
 
     margin-top: 44px;
+    margin-left: calc(-1 * var(--typical-card-margin));
 }
 
-.barbers-list-item + .barbers-list-item {
-    margin-left: 30px;
+.barbers-list-item {
+    flex-basis: calc(100% / 3 - var(--typical-card-margin));
+    margin-left: var(--typical-card-margin);
 }
 
 .barbers-list-name {
@@ -389,38 +505,122 @@ button {
 }
 
 .social-network-list {
+    display: flex;
+    justify-content: center;
     margin-top: 30px;
+}
+
+.social-network-item + .social-network-item {
+    margin-left: 10px;
+}
+
+.social-network-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
     height: 44px;
 
-    border: 1px solid black;
+    fill: var(--secondary-text-color);
+    background-color: var(--primary-white-color);
+    border-radius: 50%;
+}
+
+.social-network-link:hover,
+.social-network-link:focus {
+    fill: var(--accent-color);
 }
 
 /* Стили галереи */
 
 .gallery-list {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 44px;
+    margin-left: calc(-1 *  var(--typical-card-margin));
+    margin-bottom: calc(-1 * var(--typical-card-margin));
+}
+
+.gallery-list-item {
+    width: calc(100% / 4 - var(--typical-card-margin));
+    margin-left: var(--typical-card-margin);
+    margin-bottom: var(--typical-card-margin);
+}
+
+/* Общие стили записи и контактов */
+.contacts-wrap {
+    background-color: var(--background-contacts-color);
+    background-image: url(../images/contacts_bg.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: calc(50% - 15px);
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.contacts-wrap .container {
+    display: flex;
+}
+
+/* Стили он-лайн записи */
+.appointment {
+    flex-grow: 1;
+    padding: 130px 0 193px;
+}
+
+.contacts-form-item {
     margin-top: 44px;
 }
 
-.gallery-list-item + .gallery-list-item {
+.contacts-form-item input {
+    width: 260px;
+    height: 24px;
+    padding: 0;
+
+    color: var(--primary-white-color);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    cursor: pointer;
+}
+
+.contacts-form-item input::placeholder,
+.contacts-form-area::placeholder {
+    color: rgba(157, 164, 189, 0.4);
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.contacts-form-tel {
     margin-left: 30px;
+}
+
+.contacts-form-area {
+    resize: none;
+    width: 560px;
+    height: 76px;
+
+    color: var(--primary-white-color);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    cursor: pointer;
+}
+
+.contacts-form-item input:hover,
+.contacts-form-area:hover {
+    border: none;
+    border-bottom: 1px solid var(--primary-white-color);
 }
 
 /* Стили контактов */
 .contacts {
-    background-color: var(--background-contacts-color);
-}
-
-.contacts-blocks {
-    display: flex;
-}
-
-.appointment-block, .contacts-block {
-    width: 50%;
-}
-
-.contacts-title {
-    color: var(--primary-white-color);
+    width: calc(50% - 15px);
+    padding-left: 100px;
 }
 
 .contacts-list {
@@ -429,21 +629,32 @@ button {
 }
 
 .contacts-list-item + .contacts-list-item {
-    margin-top: 20px;
+    margin-top: var(--typical-text-margin);
 }
 
 .contacts-list-link {
+    display: flex;
+    align-items: center;
+
     color: var(--primary-grey);
     font-style: normal;
 }
 
-.contacts-list-link:hover,
+.contacts-list-icon {
+    margin-right: 16px;
+}
+
+/* .contacts-list-link:hover,
 .contacts-list-link:focus {
     color: var(--accent-color);
-}
+} */
 
 .timetable {
     color: var(--primary-white-color);
+}
+
+.timetable::before {
+    background-color: var(--secondary-grey);
 }
 
 .timetable-text {
