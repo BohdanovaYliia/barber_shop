@@ -1,0 +1,13 @@
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 44px;
+    margin-left: calc(-1 * #{$typical-card-margin});
+    margin-bottom: calc(-1 * #{$typical-card-margin});
+}
+
+.gallery-list-item {
+    width: calc(100% / 4 - #{$typical-card-margin});
+    margin-left: $typical-card-margin;
+    margin-bottom: $typical-card-margin;
+}

@@ -1,0 +1,38 @@
+.primery-btn {
+    min-width: 160px;
+    height: 40px;
+    padding: 0;
+
+    color: $primary-white-color;
+    background-color: transparent;
+    font-family: $primary-font-family;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    border: 1px solid $accent-color;
+    border-radius: 25px;
+
+    transition: background-color $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+
+}
+
+.primery-btn--dark {
+    margin-top: 40px;
+    
+    color: $secondary-text-color;
+    transition: color $transition-duration $transition-timing-function,
+        background-color $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $primary-white-color;
+        background-color: $accent-color;
+    }
+}

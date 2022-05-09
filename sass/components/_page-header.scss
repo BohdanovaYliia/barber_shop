@@ -1,0 +1,14 @@
+.page-header {
+    position: absolute;
+    width: 100%;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    font-weight: 600;
+}
+
+.page-header .container {
+    display: flex;
+    align-items: center;
+}

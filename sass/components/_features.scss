@@ -1,0 +1,76 @@
+.features {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 121px;
+    padding-bottom: 130px;
+}
+
+.features-blocks {
+    display: flex;
+    justify-content: center;
+    width: calc(50% - 15px);
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 370px;
+}
+
+.features-list-item {
+    width: 170px;
+    height: 133px;
+    padding: 20px 24px;
+
+    background-color: $background-secondary-color;
+}
+
+.features-list-item:nth-child(odd) {
+    margin-right: $typical-card-margin;
+}
+
+.features-list-item:nth-child(even) {
+    margin-top: $typical-card-margin;
+}
+
+.features-list-number {
+    position: relative;
+    display: block;
+    text-align: center;
+
+    color: $secondary-text-color;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    letter-spacing: 0.05em;
+
+    &::after {
+        content: "+";
+        position: absolute;
+        top: 5px;
+        margin-left: 3px;
+
+        color: $accent-color;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.38;
+    }
+}
+
+.features-list-text {
+    text-align: center;
+
+    color: $secondary-text-color;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+}
+
+.features-content {
+    width: calc(50% - 15px);
+    padding-top: 9px;
+}
+
+.features-paragraph {
+    margin-top: $typical-text-margin;
+}

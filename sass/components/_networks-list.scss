@@ -1,0 +1,38 @@
+.networks-list {
+    display: flex;
+}
+
+.networks-list-item {
+    display: flex;
+    align-items: center;
+}
+
+.networks-list-item:first-child::before {
+    content: "";
+
+    width: 60px;
+    height: 1px;
+    margin-right: 40px;
+
+    background-color: $secondary-text-color;
+}
+
+.networks-list-item+.networks-list-item {
+    margin-left: 40px;
+}
+
+.networks-list-link {
+    color: $secondary-text-color;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+
+    transition: color $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+

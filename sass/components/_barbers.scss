@@ -1,0 +1,33 @@
+.barbers {
+    background-color: $background-secondary-color;
+}
+
+.barbers-list {
+    display: flex;
+    text-align: center;
+
+    margin-top: 44px;
+    margin-left: calc(-1 * #{$typical-card-margin});
+}
+
+.barbers-list-item {
+    flex-basis: calc(100% / 3 - #{$typical-card-margin});
+    margin-left: $typical-card-margin;
+}
+
+.barbers-list-name {
+    margin-top: 30px;
+
+    color: $secondary-text-color;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+}
+
+.barbers-list-text {
+    margin-top: 8px;
+
+    color: $accent-color;
+    font-size: 14px;
+    line-height: 1.36;
+}

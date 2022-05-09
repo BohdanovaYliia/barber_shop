@@ -1,0 +1,24 @@
+.header-contacts {
+    margin-left: auto;
+}
+
+.header-contacts-link {
+    margin-right: 40px;
+
+    color: $primary-white-color;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    transition: color $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.header-primery-btn {
+    margin-right: 7px;
+}

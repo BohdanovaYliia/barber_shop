@@ -1,0 +1,18 @@
+.page-footer {
+    background-color: $background-secondary-color;
+    padding-top: 57px;
+    padding-bottom: 55px;
+}
+
+.footer-blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    color: $primary-grey;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+}

@@ -1,0 +1,11 @@
+.logo {
+    margin-right: 70px;
+    fill: $secondary-text-color;
+
+    transition: fill $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+}

@@ -1,0 +1,22 @@
+.site-nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav-item+.site-nav-item {
+    margin-left: 40px;
+}
+
+.site-nav-link {
+    color: $primary-white-color;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+
+    transition: color $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
