@@ -1,36 +1,84 @@
+.section-features {
+    @include desktop {
+        padding-top: 121px;
+    }
+}
+
 .features {
     display: flex;
     justify-content: space-between;
-    padding-top: 121px;
-    padding-bottom: 130px;
+
+    @media screen and (max-width: 1199px) {
+        flex-direction: column-reverse;
+    }
 }
 
 .features-blocks {
     display: flex;
     justify-content: center;
-    width: calc(50% - 15px);
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        margin-top: 44px;
+    }
+
+    @include desktop {
+        width: calc(50% - 15px);
+    }
+    
 }
 
 .features-list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 370px;
-}
+    @include mobile {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
 
-.features-list-item {
-    width: 170px;
-    height: 133px;
-    padding: 20px 24px;
+    @include tablet {
+        width: 450px;
+    }
 
-    background-color: $background-secondary-color;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: auto;
+    }
+
+    @include desktop {
+        width: 370px;
+    }
 }
 
 .features-list-item:nth-child(odd) {
     margin-right: $typical-card-margin;
+
+    @media screen and (max-width: 479px) {
+        margin: 30px auto 0;
+    }
 }
 
 .features-list-item:nth-child(even) {
     margin-top: $typical-card-margin;
+
+    @media screen and (max-width: 479px) {
+        margin: 30px auto 0;
+    }
+}
+
+.features-list-item {
+    width: 193px;
+    height: 133px;
+    padding: 20px 36px;
+
+    background-color: $background-secondary-color;
+
+    @include tablet {
+        width: 210px;
+        padding: 20px 44px;
+    }
+
+    @include desktop {
+        width: 170px;
+        padding: 20px 24px;
+    }
 }
 
 .features-list-number {
@@ -67,8 +115,16 @@
 }
 
 .features-content {
-    width: calc(50% - 15px);
-    padding-top: 9px;
+    width: 100%;
+
+    @include tablet {
+        width: 500px;
+    }
+
+    @include desktop {
+        width: calc(50% - 15px);
+        padding-top: 9px;
+    }
 }
 
 .features-paragraph {

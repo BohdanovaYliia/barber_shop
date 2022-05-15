@@ -26,6 +26,16 @@
             <use href="./images/symbol-defs.svg#icon-Logo"></use>
           </svg>
         </a>
+        <button type="button" class="menu-open-btn">
+          <svg
+            class="open-icon"
+            width="40px"
+            height="40px"
+            aria-label="Переключатель моюильного меню"
+          >
+            <use href="./images/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
         <nav class="site-nav">
           <ul class="site-nav-list">
             <li class="site-nav-item"><a href="" class="site-nav-link">О нас</a></li>
@@ -36,10 +46,45 @@
         </nav>
         <div class="header-contacts">
           <a href="tel:+380441111111" class="header-contacts-link">+38 044 111 11 11</a>
-          <button type="button" class="primery-btn header-primery-btn" data-modal-open>онлайн-запись</button>
+          <button type="button" class="primery-btn" data-modal-open>онлайн-запись</button>
         </div>
       </div>
     </header>
+
+    <div class="overlay overlay--is-hidden">
+      <div class="menu-wrap">
+        <button type="button" class="menu-close-btn">
+          <svg
+            class="close-icon"
+            width="40px"
+            height="40px"
+            aria-label="Переключатель моюильного меню"
+          >
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="menu-nav">
+          <ul class="menu-nav-list">
+            <li class="menu-nav-item"><a href="" class="menu-nav-link">О нас</a></li>
+            <li class="menu-nav-item"><a href="" class="menu-nav-link">Услуги и цены</a></li>
+            <li class="menu-nav-item"><a href="" class="menu-nav-link">Мастера</a></li>
+            <li class="menu-nav-item"><a href="" class="menu-nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="menu-contacts">
+          <a href="tel:+380441111111" class="menu-contacts-link">+38 044 111 11 11</a>
+          <button type="button" class="primery-btn primery-btn--dark menu-btn" data-modal-open>
+            онлайн-запись
+          </button>
+        </div>
+        <ul class="menu-networks">
+          <li class="menu-networks-item">
+            <a href="" class="menu-networks-link">Instagram</a>
+          </li>
+          <li class="menu-networks-item"><a href="" class="menu-networks-link">Youtube</a></li>
+        </ul>
+      </div>
+    </div>
 
     <main>
       <!-- Главная секция -->
@@ -48,7 +93,7 @@
           <div class="hero-networks-thumb">
             <ul class="networks-list hero-networks">
               <li class="networks-list-item">
-                <a href="" class="networks-list-link first-link">Instagram</a>
+                <a href="" class="networks-list-link">Instagram</a>
               </li>
               <li class="networks-list-item"><a href="" class="networks-list-link">Youtube</a></li>
             </ul>
@@ -68,20 +113,15 @@
         <div class="container">
           <ul class="about-list">
             <li class="about-list-item">
-              <img src="./images/about_us_1.jpg" alt="Мастер бреет шею" width="270" height="445" />
+              <img src="./images/about_us_.jpg" alt="Мастер бреет шею" />
             </li>
             <li class="about-list-item">
-              <img
-                src="./images/about_us_2.jpg"
-                alt="Мастер стрижет затылок"
-                width="270"
-                height="445"
-              />
+              <img src="./images/about_us_.jpg" alt="Мастер стрижет затылок" />
             </li>
           </ul>
           <div class="about-content">
             <p class="subtitle">О НАС</p>
-            <h2 class="section-title">Лучший Барбершоп твоего города</h2>
+            <h2 class="section-title about-title">Лучший Барбершоп твоего города</h2>
             <p class="about-undertitle">
               Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
             </p>
@@ -91,7 +131,9 @@
               команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button type="button" class="primery-btn primery-btn--dark" data-modal-open>онлайн-запись</button>
+            <button type="button" class="primery-btn primery-btn--dark" data-modal-open>
+              онлайн-запись
+            </button>
           </div>
         </div>
       </section>
@@ -139,12 +181,14 @@
               </li>
             </ul>
           </div>
-          <button type="button" class="primery-btn price-primery-btn" data-modal-open>онлайн-запись</button>
+          <button type="button" class="primery-btn price-primery-btn" data-modal-open>
+            онлайн-запись
+          </button>
         </div>
       </section>
 
       <!-- Преимущества -->
-      <section>
+      <section class="section section-features">
         <div class="container features">
           <div class="features-blocks">
             <ul class="features-list">
@@ -313,7 +357,7 @@
       <!-- Галерея -->
       <section class="section">
         <div class="container">
-          <p class="subtitle">На латинском языке “барба” означает “борода”</p>
+          <p class="subtitle gallery-subtitle">На латинском языке “барба” означает “борода”</p>
           <!-- Скрытый заголовок -->
           <h2 class="visually-hidden">Галерея фото</h2>
           <ul class="gallery-list">
@@ -353,26 +397,37 @@
         </div>
       </section>
 
-      <div class="contacts-wrap">
+      <div class="sections-wrap">
         <div class="container">
           <!-- Секция он-лайн записи -->
-          <section class="appointment">
-            <h2 class="section-title section-title--light">Онлайн-запись</h2>
+          <section class="section appointment">
+            <h2 class="section-title section-title--light form-title">Онлайн-запись</h2>
             <form class="form" name="form" autocomplete="on">
               <div class="form-thumb">
                 <div class="form-item">
-                  <input class="form-input" type="text" name="username" id="name" placeholder=" "/>
+                  <input class="form-input" type="text" name="username" id="name" placeholder=" " />
                   <label class="form-label" for="name">Имя*</label>
                 </div>
 
                 <div class="form-item">
-                  <input class="form-input form-input--tel-width" type="tel" name="phone_number" id="phone" placeholder=" "/>
+                  <input
+                    class="form-input form-input--tel-width"
+                    type="tel"
+                    name="phone_number"
+                    id="phone"
+                    placeholder=" "
+                  />
                   <label class="form-label" for="phone">Телефон*</label>
                 </div>
               </div>
 
               <div class="form-item form-item--other-height">
-                <textarea class="form-input form-area" name="message" id="message" placeholder=" "></textarea>
+                <textarea
+                  class="form-input form-area"
+                  name="message"
+                  id="message"
+                  placeholder=" "
+                ></textarea>
                 <label class="form-label" for="message">сообщение</label>
               </div>
 
@@ -382,38 +437,48 @@
 
           <!-- Секция контактов-->
           <section class="section contacts">
-            <p class="section-title section-title--light">Контакты</p>
-            <address>
-              <ul class="contacts-list">
-                <li class="contacts-list-item">
-                  <a href="" target="_blank" class="contacts-list-link">
-                    <svg class="contacts-list-icon" width="24" height="24">
-                      <use href="./images/symbol-defs.svg#icon-map-pin"></use>
-                    </svg>
-                    ул. Васильковая, 7А <br />
-                    Киев, 08132
-                  </a>
-                </li>
-                <li class="contacts-list-item">
-                  <a href="tel:+380441111111" class="contacts-list-link">
-                    <svg class="contacts-list-icon" width="24" height="24">
-                      <use href="./images/symbol-defs.svg#icon-phone"></use>
-                    </svg>
-                    +38 044 111 11 11</a
-                  >
-                </li>
-                <li class="contacts-list-item">
-                  <a href="mailto:barbershop@email.com" class="contacts-list-link">
-                    <svg class="contacts-list-icon" width="24" height="24">
-                      <use href="./images/symbol-defs.svg#icon-mail"></use>
-                    </svg>
-                    barbershop@email.com
-                  </a>
-                </li>
-              </ul>
-            </address>
-            <p class="subtitle timetable">время работы</p>
-            <p class="timetable-text">Ежедневно с 9:00 до 22:00</p>
+            <p class="section-title section-title--light contacts-title">Контакты</p>
+            <div class="contacts-wrap">
+              <address>
+                <ul class="contacts-list">
+                  <li class="contacts-list-item">
+                    <a href="" target="_blank" class="contacts-list-link adress-mobile-link">
+                      <svg class="contacts-list-icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-map-pin"></use>
+                      </svg>
+                      ул. Васильковая, 7А, Киев, 08132
+                    </a>
+                    <a href="" target="_blank" class="contacts-list-link adress-tablet-link">
+                      <svg class="contacts-list-icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-map-pin"></use>
+                      </svg>
+                      ул. Васильковая, 7А <br />
+                      Киев, 08132
+                    </a>
+                  </li>
+                  <li class="contacts-list-item">
+                    <a href="tel:+380441111111" class="contacts-list-link">
+                      <svg class="contacts-list-icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-phone"></use>
+                      </svg>
+                      +38 044 111 11 11</a
+                    >
+                  </li>
+                  <li class="contacts-list-item">
+                    <a href="mailto:barbershop@email.com" class="contacts-list-link">
+                      <svg class="contacts-list-icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-mail"></use>
+                      </svg>
+                      barbershop@email.com
+                    </a>
+                  </li>
+                </ul>
+              </address>
+              <div class="timetable-wrap">
+                <p class="subtitle timetable">время работы</p>
+                <p class="timetable-text">Ежедневно с 9:00 до 22:00</p>
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -422,8 +487,8 @@
     <footer class="page-footer">
       <div class="container footer-blocks">
         <p class="footer-text">&copy; Copyright 2020</p>
-        <ul class="networks-list">
-          <li class="networks-list-item first-link">
+        <ul class="networks-list footer-networks">
+          <li class="networks-list-item">
             <a href="" class="networks-list-link first-link">Instagram</a>
           </li>
           <li class="networks-list-item"><a href="" class="networks-list-link">Youtube</a></li>
@@ -431,35 +496,6 @@
       </div>
     </footer>
 
-    <!-- Модальное окно-->
-    <div class="overlay overlay--is-hidden" data-modal>
-      <div class="modal">
-        <button type="button" class="modal-btn-close" data-modal-close>&#9733</button>
-
-        <form class="form modal-form" name="form" autocomplete="on">
-          <h2 class="section-title section-title--small">Онлайн-запись</h2>
-          <div class="form-thumb">
-            <div class="form-item">
-              <input class="form-input form-input--dark" type="text" name="username" id="name" placeholder=" " />
-              <label class="form-label form-label--dark" for="name">Имя*</label>
-            </div>
-
-            <div class="form-item">
-              <input class="form-input form-input--tel-width form-input--dark" type="tel" name="phone_number" id="phone" placeholder=" " />
-              <label class="form-label form-label--dark" for="phone">Телефон*</label>
-            </div>
-          </div>
-
-          <div class="form-item form-item--other-height">
-            <textarea class="form-input form-area form-input--dark" name="message" id="message" placeholder=" "></textarea>
-            <label class="form-label form-label--dark" for="message">сообщение</label>
-          </div>
-
-          <button type="submit" class="primery-btn primery-btn--dark">отправить</button>
-        </form>
-      </div>
-    </div>
-
-    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

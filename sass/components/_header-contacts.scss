@@ -1,9 +1,28 @@
 .header-contacts {
-    margin-left: auto;
+    display: none;
+    
+    @include tablet {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: auto;
+        margin-right: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include desktop {
+        flex-direction: row;
+    }
 }
 
 .header-contacts-link {
-    margin-right: 40px;
+    @media screen and (max-width: 1199px) {
+        margin-top: 20px;
+    }
+
+    @include desktop {
+        margin-right: 40px;
+    }
 
     color: $primary-white-color;
     font-size: 12px;
@@ -17,8 +36,4 @@
     &:focus {
         color: $accent-color;
     }
-}
-
-.header-primery-btn {
-    margin-right: 7px;
 }

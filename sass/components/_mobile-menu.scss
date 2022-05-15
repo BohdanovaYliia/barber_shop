@@ -1,0 +1,124 @@
+.menu-open-btn,
+.menu-close-btn {
+    border: none;
+    background-color: transparent;
+    display: block;
+    margin-left: auto;
+
+    @include tablet {
+        display: none;
+    }
+
+    &:hover .open-icon,
+    &:hover .close-icon,
+    &:focus .open-icon,
+    &:focus .close-icon {
+        fill: $accent-color;
+    }
+}
+
+.open-icon {
+    fill: $primary-white-color;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background-hero-color;
+
+    transition: opacity $transition-duration, visibility $transition-duration;
+}
+
+.overlay--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-y: scroll;
+    z-index: 5;
+    width: 347px;
+    height: 100vh;
+    padding: 48px 31px 48px 50px;
+    background-color: $primary-white-color;
+    transform: translateX(0);
+    transition: transform $transition-duration;
+}
+
+.overlay.overlay--is-hidden .menu-wrap {
+    transform: translateX(101%);
+}
+
+.menu-nav-item+.menu-nav-item {
+    margin-top: 24px;
+}
+
+.menu-nav-link,
+.menu-contacts-link {
+    color: $secondary-text-color;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: 0.1em;
+
+    transition: color $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.menu-contacts {
+    margin-top: 64px;
+}
+
+.menu-btn {
+    min-width: 194px;
+    margin-top: 24px;
+}
+
+.menu-networks {
+    position: relative;
+    margin-top: 64px;
+    padding-left: 100px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 0;
+    
+        width: 60px;
+        height: 1px;
+    
+        background-color: $secondary-text-color;
+    }
+}
+
+.menu-networks-item+.menu-networks-item {
+    margin-top: 24px;
+}
+
+.menu-networks-link {
+    color: $secondary-text-color;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+
+    transition: color $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+

@@ -1,6 +1,14 @@
 .logo {
-    margin-right: 70px;
-    fill: $secondary-text-color;
+    fill: $primary-white-color;
+    
+    @include tablet {
+        margin-right: 50px;
+        fill: $secondary-text-color;
+    }
+
+    @include desktop {
+        margin-right: 70px;
+    }
 
     transition: fill $transition-duration $transition-timing-function;
 

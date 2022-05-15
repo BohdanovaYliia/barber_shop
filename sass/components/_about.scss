@@ -3,21 +3,60 @@
 }
 
 .about-list {
-    display: flex;
-    flex-shrink: 0;
-    margin-right: 64px;
+    display: none;
+
+    @include tablet {
+        display: block;
+        margin-right: 30px;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-shrink: 0;
+        margin-right: 64px;
+    }
+}
+
+.about-list-item {
+    display: block;
+    width: 330px;
+    height: 235px;
+
+    @include desktop {
+        width: 270px;
+        height: 445px;
+    }
 }
 
 .about-list-item+.about-list-item {
-    margin-left: $typical-card-margin;
+    @media screen and (max-width: 1199px) {
+        margin-top: $typical-card-margin;
+    }
+
+    @include desktop {
+        margin-left: $typical-card-margin;
+    }
+}
+
+.about-title {
+    @media screen and (max-width: 1199px) {
+        font-size: 28px;
+        line-height: 1.18;
+    }
 }
 
 .about-undertitle {
     margin-top: $typical-text-margin;
+
+    @media screen and (max-width: 1199px) {
+        font-size: 16px;
+        line-height: 1.63;
+    }
 }
 
 .about-text {
     margin-top: $typical-text-margin;
+    margin-bottom: 40px;
 
     font-size: 14px;
     line-height: 1.86;

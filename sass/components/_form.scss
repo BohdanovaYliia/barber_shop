@@ -1,11 +1,20 @@
-.form-thumb {
-    display: flex;
-    justify-content: space-between;
-    width: 560px;
+.form-title {
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
 }
 
-.form-thumb:last-child {
-    margin-left: 30px;
+.form-thumb {
+    width: 100%;
+
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include desktop {
+        width: 560px;
+    }
 }
 
 .form-item {
@@ -40,7 +49,7 @@
 }
 
 .form-input {
-    width: 270px;
+    width: 100%;
     height: 24px;
 
     color: $primary-white-color;
@@ -51,9 +60,17 @@
 
     transition: border-bottom $transition-duration $transition-timing-function;
 
-    &--tel-width {
-        width: 260px;
+    @include tablet {
+        width: 330px;
     }
+
+    @include desktop {
+        width: 270px;
+        &--tel-width {
+            width: 260px;
+        }
+    }
+
 
     &:hover {
         border-bottom: 1px solid $primary-white-color;
@@ -75,28 +92,20 @@
 
 .form-area {
     resize: none;
-    width: 560px;
+    width: 100%;
     height: 76px;
+
+    @include desktop {
+        width: 560px;
+    }
 }
 
 .form-btn {
     margin-top: 44px;
-}
 
-.form-input--dark {
-    border-bottom: 1px solid $primary-text-color;
-    color: $secondary-text-color;
-
-    &:hover {
-        border-bottom: 1px solid $accent-color;
-    }
-
-    &:hover+label {
-        color: $accent-color;
-    }
-
-    &:focus+label {
-        transform: translateY(-20px);
-        color: $accent-color;
+    @media screen and (max-width: 767px) {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
     }
 }

@@ -1,4 +1,5 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./components/general";
 @import "./components/general-section";
 @import "./components/page-header";
@@ -7,6 +8,7 @@
 @import "./components/header-contacts";
 @import "./components/primery-btn";
 @import "./components/networks-list";
+@import "./components/mobile-menu";
 @import "./components/hero";
 @import "./components/about";
 @import "./components/price";
@@ -18,6 +20,5 @@
 @import "./components/form";
 @import "./components/contacts";
 @import "./components/page-footer";
-@import "./components/modal";
 
 
