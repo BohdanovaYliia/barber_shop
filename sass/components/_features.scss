@@ -85,6 +85,7 @@
     position: relative;
     display: block;
     text-align: center;
+    z-index: 1;
 
     color: $secondary-text-color;
     font-weight: 700;
@@ -97,6 +98,7 @@
         position: absolute;
         top: 5px;
         margin-left: 3px;
+        z-index: 1;
 
         color: $accent-color;
         font-weight: 600;

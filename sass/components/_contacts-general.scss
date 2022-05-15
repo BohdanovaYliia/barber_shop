@@ -1,11 +1,38 @@
 .sections-wrap {
     background-color: $background-contacts-color;
-    // background-image: url(../images/contacts_bg.png);
-    // background-repeat: no-repeat;
-    // background-position: right;
-    // background-size: calc(50% - 15px);
-    // max-width: 1280px;
-    // margin: 0 auto;
+    background-image: url(../images/contacts-mobile.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi), 
+    screen and (min-resolution: 2dppx) {
+        background-image: url(../images/contacts-mobile@2x.png);
+    }
+
+    @media screen and (min-width: 481px) {
+        background-image: url(../images/contacts-tablet.png);
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: url(../images/contacts-tablet@2x.png);
+        }
+    }
+
+    @include desktop {
+        background-image: url(../images/contacts-desktop.png);
+        background-size: calc(50% - 15px);
+        background-position: right;
+        max-width: 1280px;
+        margin: 0 auto;
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: url(../images/contacts-desktop@2x.png);
+        }
+    }
 }
 
 .sections-wrap .container {

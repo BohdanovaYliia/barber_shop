@@ -23,7 +23,7 @@
       <div class="container">
         <a href="./index.html">
           <svg class="logo" width="66" height="55.5">
-            <use href="./images/symbol-defs.svg#icon-Logo"></use>
+            <use href="./images/icon.svg#icon-Logo"></use>
           </svg>
         </a>
         <button type="button" class="menu-open-btn">
@@ -33,7 +33,7 @@
             height="40px"
             aria-label="Переключатель моюильного меню"
           >
-            <use href="./images/symbol-defs.svg#icon-menu"></use>
+            <use href="./images/icon.svg#icon-menu"></use>
           </svg>
         </button>
         <nav class="site-nav">
@@ -49,42 +49,41 @@
           <button type="button" class="primery-btn" data-modal-open>онлайн-запись</button>
         </div>
       </div>
-    </header>
-
-    <div class="overlay overlay--is-hidden">
-      <div class="menu-wrap">
-        <button type="button" class="menu-close-btn">
-          <svg
-            class="close-icon"
-            width="40px"
-            height="40px"
-            aria-label="Переключатель моюильного меню"
-          >
-            <use href="./images/symbol-defs.svg#icon-close"></use>
-          </svg>
-        </button>
-        <nav class="menu-nav">
-          <ul class="menu-nav-list">
-            <li class="menu-nav-item"><a href="" class="menu-nav-link">О нас</a></li>
-            <li class="menu-nav-item"><a href="" class="menu-nav-link">Услуги и цены</a></li>
-            <li class="menu-nav-item"><a href="" class="menu-nav-link">Мастера</a></li>
-            <li class="menu-nav-item"><a href="" class="menu-nav-link">Контакты</a></li>
-          </ul>
-        </nav>
-        <div class="menu-contacts">
-          <a href="tel:+380441111111" class="menu-contacts-link">+38 044 111 11 11</a>
-          <button type="button" class="primery-btn primery-btn--dark menu-btn" data-modal-open>
-            онлайн-запись
+      <div class="overlay overlay--is-hidden">
+        <div class="menu-wrap">
+          <button type="button" class="menu-close-btn">
+            <svg
+              class="close-icon"
+              width="40px"
+              height="40px"
+              aria-label="Переключатель моюильного меню"
+            >
+              <use href="./images/icon.svg#icon-close"></use>
+            </svg>
           </button>
+          <nav class="menu-nav">
+            <ul class="menu-nav-list">
+              <li class="menu-nav-item"><a href="" class="menu-nav-link">О нас</a></li>
+              <li class="menu-nav-item"><a href="" class="menu-nav-link">Услуги и цены</a></li>
+              <li class="menu-nav-item"><a href="" class="menu-nav-link">Мастера</a></li>
+              <li class="menu-nav-item"><a href="" class="menu-nav-link">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="menu-contacts">
+            <a href="tel:+380441111111" class="menu-contacts-link">+38 044 111 11 11</a>
+            <button type="button" class="primery-btn primery-btn--dark menu-btn" data-modal-open>
+              онлайн-запись
+            </button>
+          </div>
+          <ul class="menu-networks">
+            <li class="menu-networks-item">
+              <a href="" class="menu-networks-link">Instagram</a>
+            </li>
+            <li class="menu-networks-item"><a href="" class="menu-networks-link">Youtube</a></li>
+          </ul>
         </div>
-        <ul class="menu-networks">
-          <li class="menu-networks-item">
-            <a href="" class="menu-networks-link">Instagram</a>
-          </li>
-          <li class="menu-networks-item"><a href="" class="menu-networks-link">Youtube</a></li>
-        </ul>
       </div>
-    </div>
+    </header>
 
     <main>
       <!-- Главная секция -->
@@ -113,10 +112,30 @@
         <div class="container">
           <ul class="about-list">
             <li class="about-list-item">
-              <img src="./images/about_us_.jpg" alt="Мастер бреет шею" />
+              <picture>
+                <source
+                  srcset="./images/about1-desktop.jpg 1x, ./images/about1-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  srcset="./images/about1-tablet.jpg 1x, ./images/about1-tablet@2x.jpg 2x"
+                  src="./images/about1-tablet.jpg"
+                  alt="Мастер бреет шею"
+                />
+              </picture>
             </li>
             <li class="about-list-item">
-              <img src="./images/about_us_.jpg" alt="Мастер стрижет затылок" />
+              <picture>
+                <source
+                  srcset="./images/about2-desktop.jpg 1x, ./images/about2-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  srcset="./images/about2-tablet.jpg 1x, ./images/about2-tablet@2x.jpg 2x"
+                  src="./images/about2-tablet.jpg"
+                  alt="Мастер бреет затылок"
+                />
+              </picture>
             </li>
           </ul>
           <div class="about-content">
@@ -228,123 +247,147 @@
           <h2 class="section-title">Наши мастера</h2>
           <ul class="barbers-list">
             <li class="barbers-list-item">
-              <img
-                src="./images/master1.jpg"
-                alt="Мастер первый"
-                width="370"
-                height="346"
-                class="barbers-list-img"
-              />
+              <picture>
+                <source
+                  srcset="./images/barber1-desktop.jpg 1x, ./images/barber1-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/barber1-tablet.jpg 1x, ./images/barber1-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  srcset="./images/barber1-mobile.jpg 1x, ./images/barber1-mobile@2x.jpg 2x"
+                  src="./images/barber1-mobile.jpg"
+                  alt="Барбер первый"
+                />
+              </picture>
               <h3 class="barbers-list-name" lang="en">John Smith</h3>
               <p class="barbers-list-text" lang="en">Extreme Barber</p>
               <ul class="social-network-list">
                 <li class="social-network-item">
                   <a href="" class="social-network-link">
                     <svg width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                      <use href="./images/icon.svg#icon-instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-network-item">
                   <a href="" class="social-network-link">
                     <svg width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      <use href="./images/icon.svg#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-network-item">
                   <a href="" class="social-network-link">
                     <svg width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                      <use href="./images/icon.svg#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-network-item">
                   <a href="" class="social-network-link">
                     <svg width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                      <use href="./images/icon.svg#icon-linkedin"></use>
                     </svg>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="barbers-list-item">
-              <img
-                src="./images/master2.jpg"
-                alt="Мастер второй"
-                width="370"
-                height="346"
-                class="barbers-list-img"
-              />
+              <picture>
+                <source
+                  srcset="./images/barber2-desktop.jpg 1x, ./images/barber2-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/barber2-tablet.jpg 1x, ./images/barber2-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  srcset="./images/barber2-mobile.jpg 1x, ./images/barber2-mobile@2x.jpg 2x"
+                  src="./images/barber2-mobile.jpg"
+                  alt="Барбер второй"
+                />
+              </picture>
               <h3 class="barbers-list-name" lang="en">Michele Doe</h3>
               <p class="barbers-list-text" lang="en">Extreme Barber</p>
               <ul class="social-network-list">
                 <li class="social-network-item">
                   <a href="" class="social-network-link">
                     <svg width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                      <use href="./images/icon.svg#icon-instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-network-item">
                   <a href="" class="social-network-link">
                     <svg width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      <use href="./images/icon.svg#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-network-item">
                   <a href="" class="social-network-link">
                     <svg width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                      <use href="./images/icon.svg#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-network-item">
                   <a href="" class="social-network-link">
                     <svg width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                      <use href="./images/icon.svg#icon-linkedin"></use>
                     </svg>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="barbers-list-item">
-              <img
-                src="./images/master3.jpg"
-                alt="Мастер третий"
-                width="370"
-                height="346"
-                class="barbers-list-img"
-              />
+              <picture>
+                <source
+                  srcset="./images/barber3-desktop.jpg 1x, ./images/barber3-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/barber3-tablet.jpg 1x, ./images/barber3-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  srcset="./images/barber3-mobile.jpg 1x, ./images/barber3-mobile@2x.jpg 2x"
+                  src="./images/barber3-mobile.jpg"
+                  alt="Барбер третий"
+                />
+              </picture>
               <h3 class="barbers-list-name" lang="en">Alan Black</h3>
               <p class="barbers-list-text" lang="en">Extreme Barber</p>
               <ul class="social-network-list">
                 <li class="social-network-item">
                   <a href="" class="social-network-link">
                     <svg width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                      <use href="./images/icon.svg#icon-instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-network-item">
                   <a href="" class="social-network-link">
                     <svg width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      <use href="./images/icon.svg#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-network-item">
                   <a href="" class="social-network-link">
                     <svg width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                      <use href="./images/icon.svg#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-network-item">
                   <a href="" class="social-network-link">
                     <svg width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                      <use href="./images/icon.svg#icon-linkedin"></use>
                     </svg>
                   </a>
                 </li>
@@ -362,36 +405,72 @@
           <h2 class="visually-hidden">Галерея фото</h2>
           <ul class="gallery-list">
             <li class="gallery-list-item">
-              <img
-                src="./images/GalleryFoto1.jpg"
-                alt="Барбер делает стрижку"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="./images/gallery1-desktop.jpg 1x, ./images/gallery1-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/gallery1-tablet.jpg 1x, ./images/gallery1-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  srcset="./images/gallery1-mobile.jpg 1x, ./images/gallery1-mobile@2x.jpg 2x"
+                  src="./images/gallery1-mobile.jpg"
+                  alt="Барбер делает стрижку"
+                />
+              </picture>
             </li>
             <li class="gallery-list-item">
-              <img
-                src="./images/GalleryFoto2.jpg"
-                alt="Барбер бреет лицо"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="./images/gallery2-desktop.jpg 1x, ./images/gallery2-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/gallery2-tablet.jpg 1x, ./images/gallery2-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  srcset="./images/gallery2-mobile.jpg 1x, ./images/gallery2-mobile@2x.jpg 2x"
+                  src="./images/gallery2-mobile.jpg"
+                  alt="Барбер бреет лицо"
+                />
+              </picture>
             </li>
             <li class="gallery-list-item">
-              <img
-                src="./images/GalleryFoto3.jpg"
-                alt="Барбер разогревает лицо"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="./images/gallery3-desktop.jpg 1x, ./images/gallery3-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/gallery3-tablet.jpg 1x, ./images/gallery3-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  srcset="./images/gallery3-mobile.jpg 1x, ./images/gallery3-mobile@2x.jpg 2x"
+                  src="./images/gallery3-mobile.jpg"
+                  alt="Барбер разогревает лицо"
+                />
+              </picture>
             </li>
             <li class="gallery-list-item">
-              <img
-                src="./images/GalleryFoto4.jpg"
-                alt="Барбер бреет шею"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="./images/gallery4-desktop.jpg 1x, ./images/gallery4-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/gallery4-tablet.jpg 1x, ./images/gallery4-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  srcset="./images/gallery4-mobile.jpg 1x, ./images/gallery4-mobile@2x.jpg 2x"
+                  src="./images/gallery4-mobile.jpg"
+                  alt="Барбер бреет шею"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -444,13 +523,13 @@
                   <li class="contacts-list-item">
                     <a href="" target="_blank" class="contacts-list-link adress-mobile-link">
                       <svg class="contacts-list-icon" width="24" height="24">
-                        <use href="./images/symbol-defs.svg#icon-map-pin"></use>
+                        <use href="./images/icon.svg#icon-map-pin"></use>
                       </svg>
                       ул. Васильковая, 7А, Киев, 08132
                     </a>
                     <a href="" target="_blank" class="contacts-list-link adress-tablet-link">
                       <svg class="contacts-list-icon" width="24" height="24">
-                        <use href="./images/symbol-defs.svg#icon-map-pin"></use>
+                        <use href="./images/icon.svg#icon-map-pin"></use>
                       </svg>
                       ул. Васильковая, 7А <br />
                       Киев, 08132
@@ -459,7 +538,7 @@
                   <li class="contacts-list-item">
                     <a href="tel:+380441111111" class="contacts-list-link">
                       <svg class="contacts-list-icon" width="24" height="24">
-                        <use href="./images/symbol-defs.svg#icon-phone"></use>
+                        <use href="./images/icon.svg#icon-phone"></use>
                       </svg>
                       +38 044 111 11 11</a
                     >
@@ -467,7 +546,7 @@
                   <li class="contacts-list-item">
                     <a href="mailto:barbershop@email.com" class="contacts-list-link">
                       <svg class="contacts-list-icon" width="24" height="24">
-                        <use href="./images/symbol-defs.svg#icon-mail"></use>
+                        <use href="./images/icon.svg#icon-mail"></use>
                       </svg>
                       barbershop@email.com
                     </a>

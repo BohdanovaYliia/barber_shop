@@ -3,10 +3,36 @@
     margin: 0 auto;
 
     background-color: $background-price-color;
-    background-image: url(../images/price_bg.png);
+    background-image: url(../images/price-mobile.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi), 
+    screen and (min-resolution: 2dppx) {
+        background-image: url(../images/price-mobile@2x.png);
+    }
+
+    @media screen and (min-width: 481px) {
+        background-image: url(../images/price-tablet.png);
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: url(../images/price-tablet@2x.png);
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        background-image: url(../images/price-desktop.png);
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: url(../images/price-desktop@2x.png);
+        }
+    }
 }
 
 .price-lists {
